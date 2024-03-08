@@ -1,0 +1,123 @@
+[gd_scene load_steps=18 format=3 uid="uid://dyuur33h5ao6g"]
+
+[ext_resource type="Script" path="res://Scripts/Main_Menu.gd" id="1_nodyf"]
+[ext_resource type="Texture2D" uid="uid://cwixbvbwpb78b" path="res://9285000.jpg" id="2_o44aw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tpn6p"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_evmh1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yenup"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_883mp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sp0r7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hplys"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4loss"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_27unm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rsuo0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4y6ig"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bth5a"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_34xbq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dwobq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ryndg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3u0m7"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nodyf")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_o44aw")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 314.0
+offset_top = 45.0
+offset_right = 838.0
+offset_bottom = 182.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.858824, 0, 0, 0.368627)
+theme_override_font_sizes/font_size = 100
+text = "First Game"
+horizontal_alignment = 1
+
+[node name="Exit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 804.0
+offset_top = 444.0
+offset_right = 1028.0
+offset_bottom = 526.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.976471, 0.972549, 0.945098)
+theme_override_colors/font_hover_color = Color(0.682353, 0.364706, 0.0901961, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_tpn6p")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_evmh1")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_yenup")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_883mp")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_sp0r7")
+text = "Exit"
+
+[node name="Level Select" type="Button" parent="."]
+layout_mode = 0
+offset_left = 430.0
+offset_top = 444.0
+offset_right = 722.0
+offset_bottom = 526.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.976471, 0.972549, 0.945098)
+theme_override_colors/font_hover_color = Color(0.682353, 0.364706, 0.0901961, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hplys")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_4loss")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_27unm")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_rsuo0")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_4y6ig")
+text = "Select Level"
+
+[node name="Play" type="Button" parent="."]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 444.0
+offset_right = 280.0
+offset_bottom = 526.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.976471, 0.972549, 0.945098)
+theme_override_colors/font_hover_color = Color(0.682353, 0.364706, 0.0901961, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_bth5a")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_34xbq")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_dwobq")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ryndg")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3u0m7")
+text = "Play"
+
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Level Select" to="." method="_on_level_select_pressed"]
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
